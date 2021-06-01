@@ -1,0 +1,1647 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6455BBD4-C107-4251-8A01-F70B76F3483F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrainBookingSystem</RootNamespace>
+    <AssemblyName>TrainBookingSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44371</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Admin-Index.aspx" />
+    <Content Include="Admin\Admin-Login.aspx" />
+    <Content Include="Admin\Admin-ManageOrder.aspx" />
+    <Content Include="Admin\Admin-ManageTrain-AddTrain.aspx" />
+    <Content Include="Admin\Admin-ManageTrain-EditTrain.aspx" />
+    <Content Include="Admin\Admin-ManageTrain.aspx" />
+    <Content Include="Admin\Admin-ManageUser-AddUser.aspx" />
+    <Content Include="Admin\Admin-ManageUser-EditUser.aspx" />
+    <Content Include="Admin\Admin-ManageUser.aspx" />
+    <Content Include="DepositAccount.aspx" />
+    <Content Include="Index.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="ModifyUserInfo.aspx" />
+    <Content Include="Order.aspx" />
+    <Content Include="Password.aspx" />
+    <Content Include="QueryOrder.aspx" />
+    <Content Include="Refund.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="RegisterDone.html" />
+    <Content Include="RegisterFail.html" />
+    <Content Include="UI-Extends\bootstrap-3.3.7-dist\css\bootstrap-theme.css" />
+    <Content Include="UI-Extends\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css" />
+    <Content Include="UI-Extends\bootstrap-3.3.7-dist\css\bootstrap.css" />
+    <Content Include="UI-Extends\bootstrap-3.3.7-dist\css\bootstrap.min.css" />
+    <Content Include="UI-Extends\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="UI-Extends\bootstrap-3.3.7-dist\js\bootstrap.js" />
+    <Content Include="UI-Extends\bootstrap-3.3.7-dist\js\bootstrap.min.js" />
+    <Content Include="UI-Extends\bootstrap-3.3.7-dist\js\npm.js" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\css\bootstrap-grid.css" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\css\bootstrap-grid.min.css" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\css\bootstrap-reboot.css" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\css\bootstrap-reboot.min.css" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\css\bootstrap.css" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\css\bootstrap.min.css" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\alarm-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\alarm.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\align-bottom.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\align-center.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\align-end.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\align-middle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\align-start.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\align-top.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\alt.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\app-indicator.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\app.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\archive-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\archive.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-90deg-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-90deg-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-90deg-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-90deg-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-bar-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-bar-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-bar-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-bar-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-clockwise.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-counterclockwise.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-down-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-down-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-down-left-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-down-left-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-down-left-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-down-left-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-down-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-down-right-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-down-right-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-down-right-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-down-right-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-down-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-down-short.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-down-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-down-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-down-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-left-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-left-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-left-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-left-short.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-left-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-left-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-repeat.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-return-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-return-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-right-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-right-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-right-short.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-right-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-right-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-up-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-up-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-up-left-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-up-left-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-up-left-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-up-left-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-up-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-up-right-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-up-right-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-up-right-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-up-right-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-up-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-up-short.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-up-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-up-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrow-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrows-angle-contract.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrows-angle-expand.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrows-collapse.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrows-expand.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrows-fullscreen.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\arrows-move.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\aspect-ratio-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\aspect-ratio.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\asterisk.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\at.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\award-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\award.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\back.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\backspace-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\backspace-reverse-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\backspace-reverse.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\backspace.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-3d-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-3d.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-4k-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-4k.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-8k-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-8k.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-ad-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-ad.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-ar-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-ar.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-cc-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-cc.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-hd-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-hd.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-tm-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-tm.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-vo-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-vo.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-vr-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-vr.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-wc-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\badge-wc.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bag-check-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bag-check.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bag-dash-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bag-dash.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bag-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bag-plus-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bag-plus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bag-x-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bag-x.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bag.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bar-chart-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bar-chart-line-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bar-chart-line.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bar-chart-steps.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bar-chart.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\basket-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\basket.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\basket2-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\basket2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\basket3-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\basket3.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\battery-charging.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\battery-full.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\battery-half.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\battery.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bell-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bell.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bezier.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bezier2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bicycle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\binoculars-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\binoculars.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\blockquote-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\blockquote-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\book-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\book-half.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\book.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bookmark-check-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bookmark-check.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bookmark-dash-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bookmark-dash.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bookmark-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bookmark-heart-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bookmark-heart.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bookmark-plus-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bookmark-plus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bookmark-star-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bookmark-star.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bookmark-x-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bookmark-x.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bookmark.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bookmarks-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bookmarks.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bookshelf.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bootstrap-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bootstrap-icons.css" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bootstrap-icons.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bootstrap-reboot.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bootstrap.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\border-all.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\border-bottom.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\border-center.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\border-inner.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\border-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\border-middle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\border-outer.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\border-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\border-style.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\border-top.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\border-width.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\border.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bounding-box-circles.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bounding-box.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\box-arrow-down-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\box-arrow-down-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\box-arrow-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\box-arrow-in-down-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\box-arrow-in-down-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\box-arrow-in-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\box-arrow-in-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\box-arrow-in-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\box-arrow-in-up-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\box-arrow-in-up-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\box-arrow-in-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\box-arrow-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\box-arrow-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\box-arrow-up-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\box-arrow-up-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\box-arrow-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\box-seam.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\box.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\braces.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bricks.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\briefcase-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\briefcase.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\brightness-alt-high-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\brightness-alt-high.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\brightness-alt-low-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\brightness-alt-low.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\brightness-high-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\brightness-high.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\brightness-low-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\brightness-low.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\broadcast-pin.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\broadcast.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\brush-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\brush.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bucket-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bucket.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bug-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bug.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\building.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bullseye.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calculator-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calculator.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar-check-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar-check.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar-date-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar-date.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar-day-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar-day.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar-event-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar-event.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar-minus-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar-minus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar-month-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar-month.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar-plus-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar-plus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar-range-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar-range.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar-week-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar-week.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar-x-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar-x.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2-check-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2-check.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2-date-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2-date.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2-day-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2-day.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2-event-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2-event.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2-minus-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2-minus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2-month-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2-month.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2-plus-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2-plus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2-range-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2-range.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2-week-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2-week.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2-x-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2-x.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar3-event-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar3-event.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar3-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar3-range-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar3-range.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar3-week-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar3-week.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar3.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar4-event.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar4-range.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar4-week.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\calendar4.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\camera-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\camera-reels-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\camera-reels.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\camera-video-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\camera-video-off-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\camera-video-off.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\camera-video.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\camera.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\camera2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\capslock-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\capslock.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\card-checklist.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\card-heading.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\card-image.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\card-list.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\card-text.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\caret-down-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\caret-down-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\caret-down-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\caret-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\caret-left-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\caret-left-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\caret-left-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\caret-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\caret-right-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\caret-right-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\caret-right-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\caret-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\caret-up-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\caret-up-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\caret-up-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\caret-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cart-check-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cart-check.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cart-dash-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cart-dash.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cart-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cart-plus-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cart-plus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cart-x-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cart-x.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cart.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cart2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cart3.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cart4.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cash-stack.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cash.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cast.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-dots-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-dots.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-left-dots-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-left-dots.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-left-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-left-quote-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-left-quote.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-left-text-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-left-text.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-quote-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-quote.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-right-dots-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-right-dots.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-right-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-right-quote-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-right-quote.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-right-text-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-right-text.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-square-dots-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-square-dots.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-square-quote-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-square-quote.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-square-text-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-square-text.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-text-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat-text.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chat.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\check-all.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\check-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\check-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\check-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\check-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\check.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\check2-all.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\check2-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\check2-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\check2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chevron-bar-contract.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chevron-bar-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chevron-bar-expand.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chevron-bar-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chevron-bar-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chevron-bar-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chevron-compact-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chevron-compact-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chevron-compact-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chevron-compact-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chevron-contract.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chevron-double-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chevron-double-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chevron-double-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chevron-double-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chevron-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chevron-expand.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chevron-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chevron-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\chevron-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\circle-half.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\circle-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\clipboard-check.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\clipboard-data.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\clipboard-minus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\clipboard-plus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\clipboard-x.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\clipboard.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\clock-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\clock-history.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\clock.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-arrow-down-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-arrow-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-arrow-up-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-arrow-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-check-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-check.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-download-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-download.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-drizzle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-drizzle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-fog-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-fog.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-fog2-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-fog2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-hail-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-hail.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-haze-1.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-haze-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-haze.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-haze2-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-lightning-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-lightning-rain-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-lightning-rain.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-lightning.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-minus-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-minus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-moon-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-moon.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-plus-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-plus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-rain-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-rain-heavy-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-rain-heavy.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-rain.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-slash-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-slash.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-sleet-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-sleet.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-snow-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-snow.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-sun-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-sun.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-upload-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud-upload.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloud.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\clouds-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\clouds.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloudy-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cloudy.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\code-slash.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\code-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\code.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\collection-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\collection-play-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\collection-play.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\collection.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\columns-gap.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\columns.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\command.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\compass-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\compass.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cone-striped.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cone.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\controller.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cpu-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cpu.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\credit-card-2-back-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\credit-card-2-back.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\credit-card-2-front-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\credit-card-2-front.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\credit-card-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\credit-card.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\crop.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cup-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cup-straw.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cup.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cursor-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cursor-text.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\cursor.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\dash-circle-dotted.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\dash-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\dash-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\dash-square-dotted.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\dash-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\dash-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\dash.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\diagram-2-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\diagram-2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\diagram-3-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\diagram-3.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\diamond-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\diamond-half.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\diamond.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\dice-1-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\dice-1.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\dice-2-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\dice-2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\dice-3-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\dice-3.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\dice-4-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\dice-4.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\dice-5-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\dice-5.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\dice-6-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\dice-6.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\disc-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\disc.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\discord.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\display-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\display.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\distribute-horizontal.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\distribute-vertical.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\door-closed-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\door-closed.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\door-open-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\door-open.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\dot.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\download.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\droplet-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\droplet-half.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\droplet.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\earbuds.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\easel-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\easel.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\egg-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\egg-fried.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\egg.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\eject-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\eject.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-angry-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-angry.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-dizzy-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-dizzy.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-expressionless-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-expressionless.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-frown-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-frown.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-heart-eyes-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-heart-eyes.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-laughing-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-laughing.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-neutral-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-neutral.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-smile-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-smile-upside-down-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-smile-upside-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-smile.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-sunglasses-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-sunglasses.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-wink-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\emoji-wink.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\envelope-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\envelope-open-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\envelope-open.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\envelope.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\eraser-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\eraser.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\exclamation-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\exclamation-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\exclamation-diamond-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\exclamation-diamond.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\exclamation-octagon-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\exclamation-octagon.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\exclamation-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\exclamation-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\exclamation-triangle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\exclamation-triangle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\exclamation.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\exclude.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\eye-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\eye-slash-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\eye-slash.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\eye.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\eyedropper.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\eyeglasses.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\facebook.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-arrow-down-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-arrow-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-arrow-up-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-arrow-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-bar-graph-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-bar-graph.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-binary-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-binary.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-break-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-break.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-check-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-check.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-code-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-code.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-diff-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-diff.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-arrow-down-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-arrow-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-arrow-up-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-arrow-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-bar-graph-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-bar-graph.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-binary-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-binary.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-break-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-break.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-check-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-check.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-code-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-code.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-diff-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-diff.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-easel-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-easel.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-excel-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-excel.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-font-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-font.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-image-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-image.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-lock-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-lock.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-lock2-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-lock2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-medical-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-medical.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-minus-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-minus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-music-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-music.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-person-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-person.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-play-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-play.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-plus-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-plus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-post-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-post.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-ppt-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-ppt.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-richtext-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-richtext.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-ruled-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-ruled.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-slides-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-slides.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-spreadsheet-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-spreadsheet.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-text-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-text.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-word-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-word.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-x-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-x.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-zip-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark-zip.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-earmark.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-easel-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-easel.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-excel-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-excel.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-font-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-font.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-image-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-image.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-lock-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-lock.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-lock2-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-lock2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-medical-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-medical.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-minus-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-minus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-music-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-music.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-person-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-person.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-play-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-play.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-plus-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-plus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-post-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-post.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-ppt-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-ppt.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-richtext-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-richtext.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-ruled-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-ruled.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-slides-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-slides.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-spreadsheet-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-spreadsheet.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-text-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-text.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-word-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-word.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-x-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-x.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-zip-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file-zip.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\file.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\files-alt.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\files.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\film.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\filter-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\filter-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\filter-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\filter-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\filter-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\filter-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\filter.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\flag-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\flag.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\flower1.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\flower2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\flower3.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\folder-check.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\folder-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\folder-minus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\folder-plus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\folder-symlink-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\folder-symlink.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\folder-x.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\folder.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\folder2-open.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\folder2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\fonts.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\forward-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\forward.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\front.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\fullscreen-exit.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\fullscreen.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\funnel-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\funnel.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\gear-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\gear-wide-connected.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\gear-wide.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\gear.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\gem.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\geo-alt-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\geo-alt.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\geo-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\geo.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\gift-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\gift.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\github.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\globe.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\globe2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\google.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\graph-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\graph-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\grid-1x2-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\grid-1x2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\grid-3x2-gap-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\grid-3x2-gap.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\grid-3x2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\grid-3x3-gap-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\grid-3x3-gap.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\grid-3x3.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\grid-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\grid.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\grip-horizontal.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\grip-vertical.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hammer.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hand-index-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hand-index-thumb-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hand-index-thumb.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hand-index.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hand-thumbs-down-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hand-thumbs-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hand-thumbs-up-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hand-thumbs-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\handbag-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\handbag.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hash.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hdd-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hdd-network-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hdd-network.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hdd-rack-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hdd-rack.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hdd-stack-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hdd-stack.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hdd.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\headphones.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\headset.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\heart-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\heart-half.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\heart.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\heptagon-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\heptagon-half.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\heptagon.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hexagon-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hexagon-half.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hexagon.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hourglass-bottom.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hourglass-split.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hourglass-top.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hourglass.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\house-door-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\house-door.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\house-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\house.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hr.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\hurricane.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\image-alt.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\image-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\image.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\images.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\inbox-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\inbox.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\inboxes-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\inboxes.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\index.html" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\info-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\info-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\info-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\info-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\info.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\input-cursor-text.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\input-cursor.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\instagram.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\intersect.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\journal-album.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\journal-arrow-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\journal-arrow-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\journal-bookmark-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\journal-bookmark.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\journal-check.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\journal-code.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\journal-medical.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\journal-minus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\journal-plus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\journal-richtext.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\journal-text.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\journal-x.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\journal.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\journals.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\joystick.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\justify-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\justify-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\justify.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\kanban-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\kanban.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\key-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\key.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\keyboard-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\keyboard.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\ladder.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\lamp-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\lamp.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\laptop-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\laptop.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\layer-backward.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\layer-forward.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\layers-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\layers-half.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\layers.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\layout-sidebar-inset-reverse.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\layout-sidebar-inset.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\layout-sidebar-reverse.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\layout-sidebar.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\layout-split.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\layout-text-sidebar-reverse.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\layout-text-sidebar.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\layout-text-window-reverse.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\layout-text-window.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\layout-three-columns.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\layout-wtf.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\life-preserver.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\lightbulb-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\lightbulb-off-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\lightbulb-off.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\lightbulb.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\lightning-charge-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\lightning-charge.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\lightning-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\lightning.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\link-45deg.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\link.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\linkedin.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\list-check.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\list-nested.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\list-ol.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\list-stars.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\list-task.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\list-ul.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\list.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\lock-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\lock.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\mailbox.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\mailbox2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\map-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\map.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\markdown-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\markdown.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\mask.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\megaphone-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\megaphone.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\menu-app-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\menu-app.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\menu-button-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\menu-button-wide-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\menu-button-wide.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\menu-button.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\menu-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\menu-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\mic-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\mic-mute-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\mic-mute.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\mic.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\minecart-loaded.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\minecart.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\moisture.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\moon-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\moon-stars-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\moon-stars.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\moon.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\mouse-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\mouse.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\mouse2-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\mouse2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\mouse3-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\mouse3.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\music-note-beamed.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\music-note-list.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\music-note.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\music-player-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\music-player.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\newspaper.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\node-minus-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\node-minus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\node-plus-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\node-plus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\nut-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\nut.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\octagon-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\octagon-half.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\octagon.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\option.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\outlet.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\paint-bucket.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\palette-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\palette.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\palette2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\paperclip.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\paragraph.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\patch-check-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\patch-check.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\patch-exclamation-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\patch-exclamation.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\patch-minus-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\patch-minus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\patch-plus-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\patch-plus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\patch-question-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\patch-question.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pause-btn-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pause-btn.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pause-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pause-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pause-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pause.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\peace-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\peace.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pen-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pen.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pencil-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pencil-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pencil.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pentagon-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pentagon-half.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pentagon.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\people-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\people.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\percent.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\person-badge-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\person-badge.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\person-bounding-box.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\person-check-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\person-check.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\person-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\person-dash-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\person-dash.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\person-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\person-lines-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\person-plus-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\person-plus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\person-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\person-x-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\person-x.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\person.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\phone-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\phone-landscape-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\phone-landscape.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\phone-vibrate-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\phone-vibrate.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\phone.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pie-chart-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pie-chart.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pin-angle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pin-angle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pin-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pin.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pip-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\pip.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\play-btn-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\play-btn.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\play-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\play-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\play-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\play.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\plug-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\plug.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\plus-circle-dotted.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\plus-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\plus-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\plus-square-dotted.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\plus-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\plus-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\plus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\power.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\printer-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\printer.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\puzzle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\puzzle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\question-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\question-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\question-diamond-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\question-diamond.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\question-octagon-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\question-octagon.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\question-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\question-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\question.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\rainbow.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\receipt-cutoff.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\receipt.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\reception-0.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\reception-1.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\reception-2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\reception-3.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\reception-4.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\record-btn-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\record-btn.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\record-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\record-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\record-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\record.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\record2-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\record2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\reply-all-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\reply-all.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\reply-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\reply.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\rss-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\rss.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\rulers.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\save-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\save.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\save2-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\save2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\scissors.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\screwdriver.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\search.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\segmented-nav.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\server.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\share-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\share.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shield-check.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shield-exclamation.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shield-fill-check.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shield-fill-exclamation.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shield-fill-minus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shield-fill-plus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shield-fill-x.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shield-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shield-lock-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shield-lock.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shield-minus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shield-plus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shield-shaded.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shield-slash-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shield-slash.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shield-x.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shield.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shift-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shift.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shop-window.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shop.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\shuffle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\signpost-2-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\signpost-2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\signpost-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\signpost-split-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\signpost-split.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\signpost.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sim-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sim.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-backward-btn-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-backward-btn.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-backward-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-backward-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-backward-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-backward.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-end-btn-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-end-btn.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-end-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-end-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-end-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-end.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-forward-btn-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-forward-btn.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-forward-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-forward-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-forward-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-forward.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-start-btn-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-start-btn.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-start-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-start-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-start-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\skip-start.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\slack.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\slash-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\slash-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\slash-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\slash-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\slash.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sliders.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\smartwatch.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\snow.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\snow2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\snow3.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sort-alpha-down-alt.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sort-alpha-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sort-alpha-up-alt.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sort-alpha-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sort-down-alt.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sort-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sort-numeric-down-alt.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sort-numeric-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sort-numeric-up-alt.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sort-numeric-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sort-up-alt.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sort-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\soundwave.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\speaker-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\speaker.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\speedometer.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\speedometer2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\spellcheck.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\square-half.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\stack.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\star-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\star-half.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\star.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\stars.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\stickies-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\stickies.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sticky-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sticky.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\stop-btn-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\stop-btn.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\stop-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\stop-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\stop-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\stop.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\stoplights-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\stoplights.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\stopwatch-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\stopwatch.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\subtract.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\suit-club-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\suit-club.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\suit-diamond-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\suit-diamond.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\suit-heart-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\suit-heart.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\suit-spade-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\suit-spade.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sun-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sun.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sunglasses.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sunrise-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sunrise.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sunset-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\sunset.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\symmetry-horizontal.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\symmetry-vertical.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\table.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\tablet-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\tablet-landscape-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\tablet-landscape.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\tablet.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\tag-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\tag.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\tags-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\tags.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\telegram.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\telephone-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\telephone-forward-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\telephone-forward.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\telephone-inbound-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\telephone-inbound.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\telephone-minus-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\telephone-minus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\telephone-outbound-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\telephone-outbound.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\telephone-plus-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\telephone-plus.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\telephone-x-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\telephone-x.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\telephone.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\terminal-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\terminal.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\text-center.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\text-indent-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\text-indent-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\text-left.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\text-paragraph.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\text-right.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\textarea-resize.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\textarea-t.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\textarea.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\thermometer-half.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\thermometer-high.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\thermometer-low.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\thermometer-snow.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\thermometer-sun.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\thermometer.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\three-dots-vertical.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\three-dots.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\toggle-off.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\toggle-on.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\toggle2-off.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\toggle2-on.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\toggles.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\toggles2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\tools.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\tornado.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\trash-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\trash.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\trash2-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\trash2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\tree-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\tree.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\triangle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\triangle-half.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\triangle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\trophy-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\trophy.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\tropical-storm.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\truck-flatbed.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\truck.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\tsunami.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\tv-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\tv.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\twitch.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\twitter.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\type-bold.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\type-h1.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\type-h2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\type-h3.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\type-italic.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\type-strikethrough.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\type-underline.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\type.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\ui-checks-grid.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\ui-checks.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\ui-radios-grid.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\ui-radios.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\umbrella-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\umbrella.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\union.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\unlock-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\unlock.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\upc-scan.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\upc.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\upload.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\vector-pen.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\view-list.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\view-stacked.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\vinyl-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\vinyl.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\voicemail.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\volume-down-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\volume-down.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\volume-mute-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\volume-mute.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\volume-off-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\volume-off.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\volume-up-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\volume-up.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\vr.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\wallet-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\wallet.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\wallet2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\watch.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\water.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\whatsapp.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\wifi-1.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\wifi-2.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\wifi-off.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\wifi.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\wind.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\window-dock.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\window-sidebar.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\window.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\wrench.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\x-circle-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\x-circle.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\x-diamond-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\x-diamond.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\x-octagon-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\x-octagon.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\x-square-fill.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\x-square.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\x.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\youtube.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\zoom-in.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\zoom-out.svg" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\js\bootstrap.bundle.js" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\js\bootstrap.bundle.min.js" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\js\bootstrap.js" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\js\bootstrap.min.js" />
+    <Content Include="UI-Extends\laydate\laydate.css" />
+    <Content Include="UI-Extends\laydate\laydate.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Admin-Index.aspx.cs">
+      <DependentUpon>Admin-Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin-Index.aspx.designer.cs">
+      <DependentUpon>Admin-Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin-Login.aspx.cs">
+      <DependentUpon>Admin-Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin-Login.aspx.designer.cs">
+      <DependentUpon>Admin-Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin-ManageOrder.aspx.cs">
+      <DependentUpon>Admin-ManageOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin-ManageOrder.aspx.designer.cs">
+      <DependentUpon>Admin-ManageOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin-ManageTrain-AddTrain.aspx.cs">
+      <DependentUpon>Admin-ManageTrain-AddTrain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin-ManageTrain-AddTrain.aspx.designer.cs">
+      <DependentUpon>Admin-ManageTrain-AddTrain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin-ManageTrain-EditTrain.aspx.cs">
+      <DependentUpon>Admin-ManageTrain-EditTrain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin-ManageTrain-EditTrain.aspx.designer.cs">
+      <DependentUpon>Admin-ManageTrain-EditTrain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin-ManageTrain.aspx.cs">
+      <DependentUpon>Admin-ManageTrain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin-ManageTrain.aspx.designer.cs">
+      <DependentUpon>Admin-ManageTrain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin-ManageUser-AddUser.aspx.cs">
+      <DependentUpon>Admin-ManageUser-AddUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin-ManageUser-AddUser.aspx.designer.cs">
+      <DependentUpon>Admin-ManageUser-AddUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin-ManageUser-EditUser.aspx.cs">
+      <DependentUpon>Admin-ManageUser-EditUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin-ManageUser-EditUser.aspx.designer.cs">
+      <DependentUpon>Admin-ManageUser-EditUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin-ManageUser.aspx.cs">
+      <DependentUpon>Admin-ManageUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin-ManageUser.aspx.designer.cs">
+      <DependentUpon>Admin-ManageUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DepositAccount.aspx.cs">
+      <DependentUpon>DepositAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DepositAccount.aspx.designer.cs">
+      <DependentUpon>DepositAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyUserInfo.aspx.cs">
+      <DependentUpon>ModifyUserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModifyUserInfo.aspx.designer.cs">
+      <DependentUpon>ModifyUserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Password.aspx.cs">
+      <DependentUpon>Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Password.aspx.designer.cs">
+      <DependentUpon>Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryOrder.aspx.cs">
+      <DependentUpon>QueryOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryOrder.aspx.designer.cs">
+      <DependentUpon>QueryOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Refund.aspx.cs">
+      <DependentUpon>Refund.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Refund.aspx.designer.cs">
+      <DependentUpon>Refund.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="UI-Extends\bootstrap-3.3.7-dist\css\bootstrap-theme.css.map" />
+    <Content Include="UI-Extends\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="UI-Extends\bootstrap-3.3.7-dist\css\bootstrap.css.map" />
+    <Content Include="UI-Extends\bootstrap-3.3.7-dist\css\bootstrap.min.css.map" />
+    <Content Include="UI-Extends\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="UI-Extends\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="UI-Extends\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="UI-Extends\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\css\bootstrap-grid.css.map" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\css\bootstrap-reboot.css.map" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\css\bootstrap.css.map" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\css\bootstrap.min.css.map" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\js\bootstrap.bundle.js.map" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\js\bootstrap.js.map" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\js\bootstrap.min.js.map" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\bootstrap-icons.woff" />
+    <Content Include="UI-Extends\bootstrap-4.6.0-dist\fonts\svg\bootstrap-icons.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\TBS-BLL.csproj">
+      <Project>{cd2d45d6-2f5c-4a07-8f98-53038081702b}</Project>
+      <Name>TBS-BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\TBS-Models.csproj">
+      <Project>{86c27670-443d-45b0-92ab-5ddbc2a49fbc}</Project>
+      <Name>TBS-Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>13811</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44371/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
