@@ -1,0 +1,6 @@
+F:\[Wayne Lee]\学习资料\毕业论文\项目\Models\bin\Debug\Models.dll
+F:\[Wayne Lee]\学习资料\毕业论文\项目\Models\bin\Debug\Models.pdb
+F:\[Wayne Lee]\学习资料\毕业论文\项目\Models\obj\Debug\TBS-Models.csprojAssemblyReference.cache
+F:\[Wayne Lee]\学习资料\毕业论文\项目\Models\obj\Debug\TBS-Models.csproj.CoreCompileInputs.cache
+F:\[Wayne Lee]\学习资料\毕业论文\项目\Models\obj\Debug\Models.dll
+F:\[Wayne Lee]\学习资料\毕业论文\项目\Models\obj\Debug\Models.pdb
